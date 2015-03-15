@@ -1,4 +1,4 @@
-== Mustache That Just Works
+## Mustache That Just Works
 
 ```java
 import com.nabriski.mustacheeasy;

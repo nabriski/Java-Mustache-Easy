@@ -1,4 +1,4 @@
-package com.nabriski.mustache.easy;
+package com.nabriski.mustacheeasy;
 
 import java.util.Map;
 import java.util.HashMap; 

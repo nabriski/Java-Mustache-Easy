@@ -8,3 +8,4 @@ dependencies {
    compile 'com.samskivert:jmustache:1.10'
    testCompile 'junit:junit:4.12'
 }
+sourceCompatibility = '1.6' 

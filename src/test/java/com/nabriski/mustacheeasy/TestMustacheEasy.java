@@ -1,5 +1,7 @@
 package com.nabriski.mustacheeasy;
 
+import org.json.*;
+
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
@@ -19,4 +21,13 @@ public class TestMustacheEasy {
         String json = "{\"name\":\"Harry\"}";
         assertEquals(MustacheEasy.execute(tmplStr,json),"Hi Harry");
     }
+
+    @Test
+    public void testSimpleTemplateJSONObject() {
+        String tmplStr = "Hi {{name}}";
+        JSONObject jo = new JSONObject();
+        jo.put("name","Harry");
+        assertEquals(MustacheEasy.execute(tmplStr,jo),"Hi Harry");
+    }
+
 }

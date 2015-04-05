@@ -12,10 +12,15 @@ public class MustacheEasy
 {
 
     public static String execute(String template,String data) throws JSONException{
-       Map jo = jsonToMap(new JSONObject(data));
+       return execute(template,new JSONObject(data));
+    }
+
+    public static String execute(String template,JSONObject data) throws JSONException{
+       Map jo = jsonToMap(data);
        Template tmpl = com.samskivert.mustache.Mustache.compiler().compile(template);
        return tmpl.execute(jo);
     }
+
 
     public static Map jsonToMap(JSONObject json) throws JSONException {
         Map<String, Object> retMap = new HashMap<String, Object>();
